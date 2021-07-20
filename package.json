@@ -5,18 +5,23 @@
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "npx gatsby build",
+    "develop": "npx gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
+    "serve": "npx gatsby serve",
+    "clean": "npx gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@reach/dialog": "^0.15.3",
+    "@reach/tabs": "^0.15.3",
+    "@reach/visually-hidden": "^0.15.2",
     "gatsby": "^3.9.1",
+    "netlify-identity-widget": "^1.9.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-netlify-identity": "^0.2.5"
   },
   "devDependencies": {
     "prettier": "2.3.2"
