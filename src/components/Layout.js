@@ -3,14 +3,14 @@ import IdentityModal, {
   useIdentityContext,
 } from "react-netlify-identity-widget"
 
-//import {useUserContext} from '../context/user_provider'
+import {useUserContext} from '../users/context'
 // react SSR doesnt support suspense yet
 
 const Layout = ({ children }) => {
   const identity = useIdentityContext()
   const [dialog, setDialog] = React.useState(false)
 
-  //const {logInAppUser} = useUserContext()
+  const {logInAppUser} = useUserContext()
 
   const [userName, setUserName] = React.useState("")
   const isLoggedIn = identity && identity.isLoggedIn
@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
 
   React.useEffect(()=>{
     if(netlifyUser){
-      //logInAppUser()
+      logInAppUser()
       const { user_metadata:{full_name}} = netlifyUser
       setUserName(full_name)
     }
