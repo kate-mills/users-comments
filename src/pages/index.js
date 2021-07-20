@@ -1,5 +1,14 @@
 import React from "react"
+import Layout from '../components/Layout'
+import { useIdentityContext } from "react-netlify-identity-widget"
 
-export default function Home() {
-  return <div>Hello world!</div>
+const Home = ()=>{
+  const identity = useIdentityContext()
+  console.log(identity)
+
+  return (
+    <Layout>
+    </Layout>
+  )
 }
+export default Home
